@@ -1,0 +1,32 @@
+
+
+
+/* navbar.css */
+
+/* Sol taraftaki elemanların stili */
+.navbar-brand,
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  margin-right: 10px; /* İstediğiniz boşluk miktarını ayarlayabilirsiniz */
+}
+
+/* Sağ taraftaki elemanların stili */
+.auth {
+  display: flex;
+  align-items: center;
+}
+
+/* Sağa hizalamak için ml-auto sınıfını kullanıyoruz */
+.ml-auto {
+  margin-left: auto;
+}
+
+/* Sağ taraftaki CartBadge'in stilini ayarlayabilirsiniz */
+.d-flex.align-items-center.float-right {
+  margin-left: auto; /* Sağa hizalanması için */
+}
+

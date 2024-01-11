@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
 
-function App() {
+import { ReactElement } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Homepage from './pages/Homepages/Homepage';
+import Navbar from './components/Navbar/Navbar'; // Navbar ekledik
+import AddProduct from './pages/Add-Product/AddProduct';
+import Login from './pages/Login/Login';
+import ProductDetail from './pages/ProductDetail/ProductDetail';
+
+function App(): ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar /> {/* Navbar'ı ekledik */}
+      <Routes>
+        <Route path='/' element={<Homepage />}></Route>
+        
+        <Route path='/add-product' element={<AddProduct />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/products/:id' element={<ProductDetail />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
