@@ -1,12 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./navbar.css"; 
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { AuthContext } from "../../contexts/AuthContext";
 import CartBadge from "../../Cart/CartBadge";
 
+
 const Navbar: React.FC = () => {
   const authContext: any = useContext(AuthContext);
+  
+  
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
